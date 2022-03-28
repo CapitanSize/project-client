@@ -19,7 +19,6 @@ const MainPage = observer(() => {
             post.setPosts(data)
         )
     }, [post.selectedType])
-    console.log(post)
 
     return (
         <Container>
