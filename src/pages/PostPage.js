@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Card, Col, Row} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import {useParams} from 'react-router-dom'
 import {getOnePost} from "../http/postApi";
 
@@ -12,8 +12,7 @@ const PostPage = () => {
     }, [])
 
     return (
-        <Col className={"d-flex justify-content-center align-items-center"}>
-            <Card className={"mt-3"}>
+            <Card className={"mt-3"} style={{marginRight: '200px', marginLeft: '200px'}}>
                 <Card.Header><h2 style={{textAlign: 'center'}}>{post.title}</h2></Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
@@ -23,12 +22,11 @@ const PostPage = () => {
                             {' '}
                         </p>
                         <footer className="blockquote-footer">
-                            Автор - <cite title="Source Title"></cite> {post.rating}
+                            Автор - <cite title="Source Title">{post.author}</cite> {post.rating}
                         </footer>
                     </blockquote>
                 </Card.Body>
             </Card>
-        </Col>
     );
 };
 

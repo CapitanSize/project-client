@@ -4,7 +4,7 @@ import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import {observer} from "mobx-react-lite";
 import {useNavigate} from "react-router-dom";
-import {ADMIN_ROUTE, LOGIN_ROUTE, USER_ROUTE} from "../utils/consts";
+import {ABOUT_ROUTE, ADMIN_ROUTE, LOGIN_ROUTE, USER_ROUTE} from "../utils/consts";
 
 const NavBar = observer(() => {
     const {user} = useContext(Context)
@@ -33,11 +33,13 @@ const NavBar = observer(() => {
                         <Nav className="ml-2" style={{color: 'white'}}>
                             <Button variant={'outline-light'} className={"m-2"} onClick={() => navigate(USER_ROUTE + '/' + userId)}>Моя страница</Button>
                             <Button variant={'outline-light'} className={"m-2"} onClick={() => navigate(ADMIN_ROUTE)}>Администратор</Button>
+                            <Button variant={'outline-light'} className={'m-2'} onClick={() => navigate(ABOUT_ROUTE)}>О нас</Button>
                             <Button variant={'outline-light'} className={"m-2"} onClick={() => logOut()}>Выйти</Button>
                         </Nav>
                         :
                             <Nav className="ml-auto" style={{color: 'white'}}>
-                                <Button variant={'outline-light'} onClick={() => navigate(LOGIN_ROUTE)}>Войти</Button>
+                                <Button variant={'outline-light'} className={"m-2"} onClick={() => navigate(ABOUT_ROUTE)}>О нас</Button>
+                                <Button variant={'outline-light'} className={"m-2"} onClick={() => navigate(LOGIN_ROUTE)}>Войти</Button>
                             </Nav>
                     }
                 </Container>

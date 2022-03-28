@@ -5,11 +5,6 @@ export default class PostStore {
         this.types = []
         this.posts = []
         this._selectedType = {}
-        this._selectedUser = {}
-        /*this._likes = {id: 1, count: 56}
-        this._comments = [
-            {}
-        ]*/
         makeAutoObservable(this)
     }
     setTypes(types) {
@@ -21,12 +16,6 @@ export default class PostStore {
     setSelectedType(type) {
         this._selectedType = type
     }
-    /*setLikes(likes) {
-        this._likes = likes
-    }
-    setComments(comments) {
-        this._comments = comments
-    }*/
 
     get Types() {
         return this.types
@@ -40,11 +29,4 @@ export default class PostStore {
         return this._selectedType
     }
 
-    /*get Likes() {
-        return this._likes
-    }
-
-    get Comments() {
-        return this._comments
-    }*/
 }

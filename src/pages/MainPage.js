@@ -1,17 +1,16 @@
 import React, {useContext, useEffect} from 'react';
-import {Button, Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import TypeBar from "../components/TypeBar";
 import PostList from "../components/PostList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
 import {getPosts, getTypes} from "../http/postApi"
-import {logDOM} from "@testing-library/react";
+
 
 const MainPage = observer(() => {
     const {post} = useContext(Context)
     useEffect(() => {
         getTypes().then(data => post.setTypes(data))
-        //getPosts(null).then(data => post.setPosts(data))
 
     }, [])
 

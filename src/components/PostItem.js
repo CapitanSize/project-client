@@ -1,6 +1,5 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Card} from "react-bootstrap";
-import {Context} from "../index";
 import {useNavigate} from "react-router-dom";
 import {POST_ROUTE} from "../utils/consts";
 

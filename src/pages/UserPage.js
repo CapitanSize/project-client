@@ -1,5 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {Context} from "../index";
+import React, {useEffect, useState} from 'react';
 import {Button, Col, Container, Row} from "react-bootstrap";
 import CreatePost from "../components/modals/CreatePost";
 import {getPosts} from "../http/postApi";
